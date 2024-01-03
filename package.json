@@ -1,0 +1,42 @@
+{
+	"id": "can-i-use",
+	"name": "caniuse",
+	"description": "Check X can use",
+	"displayName": "caniuse",
+	"version": "0.0.4",
+	"publisher": "楔子",
+	"engines": {
+		"HBuilderX": "^2.7.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./src/extension.ts",
+	"activationEvents": [
+		"onCommand:extension.canIUse"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.canIUse",
+				"title": "Hello World"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.canIUse",
+					"group": "z_commands",
+					"when": "editorTextFocus",
+					"title": "Can I Use"
+				},
+				{
+					"group": "z_commands"
+				}
+			]
+		}
+	},
+	"extensionDependencies": [
+		"plugin-manager"
+	]
+}
